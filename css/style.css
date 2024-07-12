@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+/* Isso ta totalmente um Frankstain,
+pois não consegui organizar minhas ideias
+muito bem, e acabou dando nisso... Não me garanto
+na responsividade e ainda preciso
+arrumar isso, mas está um pouco complicado.*/
 
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
 *{
     margin: 0;
@@ -8,10 +13,11 @@
     font-family: "League Gothic", sans-serif;
 }
 
-    body{
+body{
     display: flex;
     background-color: #313131;
-    max-width: 1700px;
+    width: 100%;
+    height: 100%;
 }
 
 #nome_logotipo{
@@ -102,6 +108,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #707070;
+    width: 197px;
     height: 100vh;
     box-shadow: 5px 0px 0px #7789D8;
     position: fixed;
@@ -196,7 +203,7 @@ header{
 .suporte{
     display: flex;
     align-items: center;
-    margin-right: 25px;
+    margin-right: 30px;
 }
 
 .suporte ul{
@@ -213,7 +220,7 @@ header{
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
-    margin-left: 1130px;
+    margin-left: 1200px;
 }
 
 .nav_item{
@@ -717,6 +724,293 @@ th{
     background-color: #93eba9;
 }
 
+.brimstone{
+    background-color: #f4b572;
+}
+
+.sova{
+    background-color: #70b9e3;
+}
+
+.viper{
+    background-color: #188032;
+}
+
 .azul_color{
     background-color: #70b9e3;
+}
+
+.melhor{
+    background: linear-gradient(to right, #B4BFF5,#7789D8);
+}
+
+
+    /* Daqui para baixo o site começa a ficar mais responsivo*/
+
+@media (max-width: 600px) {
+    .login-box {
+        padding: 20px;
+    }
+
+    .login-box h2 {
+        font-size: 20px;
+    }
+
+    .user-box input,
+    .user-box label {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .suporte_link {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    #noticias_contents h1 {
+        font-size: 50px;
+    }
+
+    .nav_list, .suporte {
+        display: none;
+    }
+
+    header {
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #noticias_items img, .noticias_texto {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    #sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    #conteudo_sidebar {
+        padding: 0;
+    }
+
+    #noticias_contents {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    .nav_list, .suporte {
+        display: none;
+    }
+}
+
+/* Mudar algumas coisas pois a responsividade está horrivel*/
+/* Um pouco mais organizado, pois procurei ajuda de um amigo
+padronizar isso...*/
+
+.container_seleção{
+    width: 500px;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00000080;
+    margin: 250px;
+    margin-left: 670px ;
+    color: #ffffff;
+}
+
+.informações{
+    position: relative;
+    text-align: center;
+}
+
+.mapa-image{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.informações h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.botões {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ataque{
+    background-color: #E52842;
+    font-size: 15px;
+}
+
+.agentes_pixels-selection{
+    padding: 10px;
+}
+
+.agentes_pixels-selection p{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.agentes_pixels-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.agentes_pixels{
+    text-align: center;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.agentes_pixels img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.agentes_pixels a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.agentes_pixels p{
+    padding: 5px;
+    font-size: 14px;
+}
+
+.agentes_pixels:hover{
+    transform: scale(1.05);
+    background-color: #3c3c3c;
+}
+
+.video_main{
+    background-color: #131313;
+    border-radius: 50px;
+    width: 1700px;
+    padding: 20px;
+    margin: 90px;
+}
+
+.video_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.video_card{
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.video_card:hover{
+    transform: scale(1.05);
+}
+
+.video_card img{
+    width: 100%;
+    height: auto;
+}
+
+.video_info{
+    padding: 10px;
+}
+
+.nomes{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.nome{
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.video_info p{
+    font-size: 25px;
+    margin: 10px 0;
+    color: white;
+}
+
+.video_info span{
+    font-size: 13px;
+    margin: 5px 0;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.likes{
+    display: flex;
+    gap: 10px;
+}
+
+.popup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000000;
+}
+
+.popup_content{
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
